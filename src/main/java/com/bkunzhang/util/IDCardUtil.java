@@ -1,3 +1,5 @@
+package com.bkunzhang.util;
+
 /**
  * Created by zhbk on 2019/3/1.
  * 身份证工具
