@@ -1,5 +1,6 @@
 package com.bkunzhang.util;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Arrays;
@@ -29,6 +30,23 @@ public class IOUtils {
         }
         return textBytes;
     }
+
+    /*
+     * 将输入流转换为字节数组。利用流的方式
+     */
+    public static byte[] inputStream2ByteArray(InputStream in) throws IOException {
+        ByteArrayOutputStream bos = new ByteArrayOutputStream();
+        byte[] buffer = new byte[4096];
+        int len = -1;
+        do {
+            len = in.read(buffer);
+            if (len > 0) {
+                bos.write(buffer, 0, len);
+            }
+        } while (len > -1);
+        return bos.toByteArray();
+    }
+
 
     public static void closeInputStream(InputStream in) {
         if (in != null) {
