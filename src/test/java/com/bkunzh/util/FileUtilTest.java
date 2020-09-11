@@ -1,5 +1,7 @@
-package com.bkunzhang.util;
+package com.bkunzh.util;
 
+import com.bkunzh.util.util.FileUtil;
+import com.bkunzh.util.util.StringGenerator;
 import org.junit.Test;
 
 import java.io.File;

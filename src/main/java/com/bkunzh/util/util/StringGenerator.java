@@ -1,4 +1,4 @@
-package com.bkunzhang.util;
+package com.bkunzh.util.util;
 
 import java.util.Random;
 

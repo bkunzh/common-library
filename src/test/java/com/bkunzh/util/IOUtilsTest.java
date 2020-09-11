@@ -1,6 +1,6 @@
-package com.bkunzhang.util;
+package com.bkunzh.util;
 
-import org.junit.Before;
+import com.bkunzh.util.util.IOUtils;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -18,7 +18,7 @@ public class IOUtilsTest {
         try {
             in = IOUtilsTest.class.getResourceAsStream("/a1.jpg");
             byte[] bytes1 = IOUtils.inputStream2ByteArray(in);
-            IOUtils.closeInputStream(in);
+            com.bkunzh.util.util.IOUtils.closeInputStream(in);
             in = IOUtilsTest.class.getResourceAsStream("/a1.jpg");
             byte[] bytes2 = IOUtils.inputStreamToByteArray(in);
 

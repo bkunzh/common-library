@@ -1,11 +1,10 @@
-package com.bkunzhang.util;
+package com.bkunzh.util;
 
+import com.bkunzh.util.util.ReflectUtil;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 
 import java.lang.reflect.Field;
-import java.util.stream.IntStream;
 
 import static org.junit.Assert.*;
 
@@ -27,9 +26,9 @@ public class ReflectUtilTest {
 
     @Test
     public void getFieldValue() throws Exception {
-        assertEquals("hello world, 2019", ReflectUtil.getFieldValue(reflectUtilTest, "str"));
+        assertEquals("hello world, 2019", com.bkunzh.util.util.ReflectUtil.getFieldValue(reflectUtilTest, "str"));
         try {
-            Object ccc = ReflectUtil.getFieldValue(reflectUtilTest, "ccc");
+            Object ccc = com.bkunzh.util.util.ReflectUtil.getFieldValue(reflectUtilTest, "ccc");
         } catch (NoSuchFieldException e) {
             System.out.println("yes");
         }
@@ -39,7 +38,7 @@ public class ReflectUtilTest {
     public void getFieldValue1() throws Exception {
         Field field = String.class.getDeclaredField("value");
         try {
-            Object o = ReflectUtil.getFieldValue(reflectUtilTest, field);
+            Object o = com.bkunzh.util.util.ReflectUtil.getFieldValue(reflectUtilTest, field);
         } catch (IllegalArgumentException e) {
             assertEquals("field not in obj class", e.getMessage());
         }

@@ -1,5 +1,6 @@
-package com.bkunzhang.util;
+package com.bkunzh.util;
 
+import com.bkunzh.util.util.StringGenerator;
 import org.junit.Ignore;
 import org.junit.Test;
 

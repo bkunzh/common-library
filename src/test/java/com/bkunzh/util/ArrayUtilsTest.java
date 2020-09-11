@@ -1,5 +1,7 @@
-package com.bkunzhang.util;
+package com.bkunzh.util;
 
+import com.bkunzh.util.util.ArrayUtils;
+import com.bkunzh.util.util.IOUtils;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -25,7 +27,7 @@ public class ArrayUtilsTest {
     public void inputStreamToByteArray() throws IOException {
         InputStream in = ArrayUtilsTest.class.getResourceAsStream("/a1.jpg");
         System.out.println("in.available()=" + in.available());
-        byte[] bytes = IOUtils.inputStreamToByteArray(in);
+        byte[] bytes = com.bkunzh.util.util.IOUtils.inputStreamToByteArray(in);
         System.out.println("bytes.length=" + bytes.length);
         assertEquals(90663, bytes.length);
         IOUtils.closeInputStream(in);

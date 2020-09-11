@@ -1,4 +1,4 @@
-package com.bkunzhang.util;
+package com.bkunzh.util.util;
 
 /**
  * Created by zhbk on 2019/3/1.
